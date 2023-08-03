@@ -1,4 +1,4 @@
-package com.an.mvi.nav
+package com.an.mvi.nav.ui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

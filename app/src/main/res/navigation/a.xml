@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/a"
+    app:startDestination="@id/AFragment">
+
+    <fragment
+        android:id="@+id/AFragment"
+        android:name="com.an.mvi.nav.ui.AFragment"
+        android:label="fragment_a"
+        tools:layout="@layout/fragment_a">
+        <action
+            android:id="@+id/action_AFragment_to_processFragment"
+            app:destination="@id/processFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/processFragment"
+        android:name="com.an.mvi.nav.ui.ProcessFragment"
+        android:label="fragment_process"
+        tools:layout="@layout/fragment_process">
+        <action
+            android:id="@+id/action_processFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.an.mvi.nav.ui.ResultFragment"
+        android:label="fragment_result"
+        tools:layout="@layout/fragment_result">
+        <action
+            android:id="@+id/action_resultFragment_to_AFragment"
+            app:destination="@id/AFragment"
+            app:popUpTo="@id/AFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>

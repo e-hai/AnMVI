@@ -17,26 +17,5 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        val navHostFragment =
-            supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
-        val navController = navHostFragment.navController
-        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_nav)
-        bottomNavigationView.setupWithNavController(navController)
-
-        collectCurrentStack(navController)
-    }
-
-    /**
-     * 观察当前栈内有多少个Fragment
-     * **/
-    private fun collectCurrentStack(navController: NavController) {
-        lifecycleScope.launch {
-            navController.currentBackStack.collectLatest { stackEntry ->
-                stackEntry.forEach {
-                    Log.d("MainActivity", it.toString())
-                }
-            }
-        }
     }
 }

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/b"
+    app:startDestination="@id/BFragment">
+
+    <fragment
+        android:id="@+id/BFragment"
+        android:name="com.an.mvi.nav.ui.BFragment"
+        android:label="fragment_b"
+        tools:layout="@layout/fragment_b">
+        <action
+            android:id="@+id/action_BFragment_to_CFragment"
+            app:destination="@id/CFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/CFragment"
+        android:name="com.an.mvi.nav.ui.CFragment"
+        android:label="CFragment" >
+        <action
+            android:id="@+id/action_CFragment_to_BFragment"
+            app:destination="@id/BFragment"
+            app:enterAnim="@animator/nav_default_enter_anim"
+            app:exitAnim="@animator/nav_default_exit_anim"
+            app:popUpTo="@id/BFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+</navigation>

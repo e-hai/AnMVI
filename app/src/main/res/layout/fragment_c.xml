@@ -3,25 +3,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".nav.MainFragment">
+    tools:context=".nav.ui.CFragment">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:layout_gravity="center"
-        android:text="Main"
+        android:text="C"
         android:textColor="@android:color/holo_red_dark"
         android:textSize="20sp"
         android:textStyle="bold" />
 
     <Button
-        android:id="@+id/bt_to_process"
+        android:id="@+id/bt_to_close"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_gravity="center_horizontal"
         android:layout_marginBottom="100dp"
-        android:text="To Process" />
+        android:text="Close Self" />
 </RelativeLayout>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <set xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--在屏幕中间移动到屏幕外的右边-->
     <translate
         android:duration="500"
         android:fromXDelta="0"

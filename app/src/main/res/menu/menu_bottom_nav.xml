@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/mainFragment"
-        android:icon="@drawable/ic_launcher_foreground"
-        android:title="MAIN" />
-    <item
-        android:id="@+id/AFragment"
+        android:id="@+id/a"
         android:icon="@drawable/ic_launcher_foreground"
         android:title="A FRAG" />
+
+    <item
+        android:id="@+id/b"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:title="B FRAG" />
 </menu>

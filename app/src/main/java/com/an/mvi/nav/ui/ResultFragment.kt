@@ -1,4 +1,4 @@
-package com.an.mvi.nav
+package com.an.mvi.nav.ui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -22,19 +22,22 @@ class ResultFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         view.findViewById<Toolbar>(R.id.toolbar).setNavigationOnClickListener {
-            clickBack()
+            clearBackTaskToA()
         }
-        view.findViewById<Button>(R.id.bt_to_a).setOnClickListener {
-            clickToAFragment()
+        view.findViewById<Button>(R.id.bt_to_b).setOnClickListener {
+            clickToBFragment()
         }
     }
 
-    private fun clickToAFragment() {
-        val directions = ResultFragmentDirections.actionResultFragmentToMainFragment(true)
-        findNavController().navigate(directions)
+    /**
+     *  先返回A并清空当前栈，并且跳转到B
+     * **/
+    private fun clickToBFragment() {
+        clearBackTaskToA()
+        findNavController().navigate(R.id.b)
     }
 
-    private fun clickBack() {
-        findNavController().navigate(R.id.action_resultFragment_to_mainFragment)
+    private fun clearBackTaskToA() {
+        findNavController().navigate(R.id.action_resultFragment_to_AFragment)
     }
 }

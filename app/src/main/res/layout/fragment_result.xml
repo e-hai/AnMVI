@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".nav.ResultFragment">
+    tools:context=".nav.ui.ResultFragment">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -14,10 +14,10 @@
         app:navigationIcon="@drawable/arrow_back" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/bt_to_a"
+        android:id="@+id/bt_to_b"
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:layout_gravity="center"
-        android:text="TO A" />
+        android:text="TO B" />
 
 </FrameLayout>
